@@ -1,13 +1,8 @@
 $( "#1" ).css( "border", "3px solid red" );
 $.getJSON( "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson", function( data ) {
   $( "#result" ).html( JSON.stringify(data) );
-<<<<<<< HEAD
-  console.log( data);
-});
 
-=======
- console.log(data)
- 
+  console.log( data);
  
      $(data.features).each(function (index, value){
          console.log(value.properties.place)
@@ -18,5 +13,5 @@ $.getJSON( "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.ge
     
   
 }); 
->>>>>>> origin/master
+
 
