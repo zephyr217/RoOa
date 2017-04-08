@@ -9,7 +9,13 @@ $.getJSON( "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significan
             var UnixDate = new Date (value.properties.time)
             console.log(UnixDate)
             var LocationName=str.substring(str.lastIndexOf(",")+2,str.lastIndexOf(""))
+<<<<<<< HEAD
             console.log(magn)
+=======
+            var d = new Date(value.properties.time)
+            var datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" +
+            d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+>>>>>>> origin/master
             $("#search-button").click(function() {
                 var country = document.getElementById('autocomplete-ajax').value;
                 if(country==LocationName)
