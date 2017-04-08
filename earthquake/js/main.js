@@ -20,7 +20,8 @@ $.getJSON( "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significan
                 var country = document.getElementById('autocomplete-ajax').value;
                 if(country==LocationName)
                 {
-                    $('#country-table > tbody:last-child').append('<tr><td>'+country+'</td><td>'+magn+'</td></tr>').html();
+                    $('#country-table > tbody:last-child').append('<tr><td>'+country+'</td><td>'+
+                    magn+'</td><td>'+datestring+'</td></tr>').html();
                 }               
           });    
        });
