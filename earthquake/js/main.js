@@ -3,12 +3,14 @@ $.getJSON( "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&star
   $( "#result" ).html( JSON.stringify(data) );
  console.log(data)
  
-  console.log(data.features["0"].properties.place)
- 
  
      $(data.features).each(function (index, value){
          console.log(value.properties.place)
+          var str = value.properties.place
+          var LocationName=str.substring(str.lastIndexOf(",")+2,str.lastIndexOf(""));
+          console.log(LocationName)
      });
+    
   
 }); 
 
