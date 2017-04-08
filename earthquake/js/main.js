@@ -3,3 +3,5 @@ $.getJSON( "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.ge
   $( "#result" ).html( JSON.stringify(data) );
   console.log( data);
 });
+
+
